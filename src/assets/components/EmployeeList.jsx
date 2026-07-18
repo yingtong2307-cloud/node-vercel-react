@@ -18,12 +18,12 @@ function EmployeeList() {
       const response = await fetch("https://node-vercel-postgres-six.vercel.app/employees");
       const data = await response.json();
 
-      // sort and arrange id in alphabetical and numerical order
-      data.sort((a, b) => {
-        const nameCompare = a.id.localeCompare(b.id);
-        if (nameCompare !== 0) return nameCompare;
-        return Number(a.id) - Number(b.id);
-      });
+      // // sort and arrange id in alphabetical and numerical order
+      // data.sort((a, b) => {
+      //   const nameCompare = a.id.localeCompare(b.id);
+      //   if (nameCompare !== 0) return nameCompare;
+      //   return Number(a.id) - Number(b.id);
+      // });
 
       setEmployees(data);
     } catch (error) {
